@@ -7,3 +7,7 @@
 @Desc    : extensions
 @Software: PyCharm
 """
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
+db = SQLAlchemy()
+mg = Migrate()
