@@ -7,3 +7,12 @@
 @Desc    : __init__.py
 @Software: PyCharm
 """
+from flask import Blueprint, render_template
+
+
+sso = Blueprint('sso', __name__, url_prefix='/oauth')
+
+
+@sso.route('/login/')
+def oauth():
+    return render_template('base.html')
